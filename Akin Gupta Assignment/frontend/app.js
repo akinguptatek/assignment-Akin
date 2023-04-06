@@ -97,7 +97,7 @@ console.log(enteredValue);
 const requestData = {text:enteredValue};
 console.log(requestData);
 const options = {
-    url: 'http://backendcube:8082/cube',
+    url: 'http://backendcube/cube',
     json: true,
     body: requestData
 };
@@ -120,7 +120,7 @@ console.log(enteredValue);
 const requestData = {text:enteredValue};
 console.log(requestData);
 const options = {
-	url: 'http://backendsquare:8083/square',
+	url: 'http://backendsquare/square',
 	json: true,
 	body: requestData
 };
@@ -142,7 +142,7 @@ console.log(enteredValue);
 const requestData = {text:enteredValue};
 console.log(requestData);
 const options = {
-	url: 'http://backendfibonacci:8085/fibonacci',
+	url: 'http://backendfibonacci/fibonacci',
 	json: true,
 	body: requestData
 };
@@ -159,7 +159,7 @@ request.post(options, (err, res1, body) => {
 
 app.post('/metric', (req, res) => {
 const options = {
-	url: 'http://backendmetric:8084/metric'
+	url: 'http://backendmetric/metric'
 };
 request.get(options, (err, res1, body) => {
 	if (err) {

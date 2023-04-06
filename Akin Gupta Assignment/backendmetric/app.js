@@ -76,7 +76,7 @@ mongoose.connect(
       console.error(err);
     } else {
       console.log('CONNECTED TO MONGODB!!');
-      app.listen(8084);
     }
+    app.listen(80);
   }
 );

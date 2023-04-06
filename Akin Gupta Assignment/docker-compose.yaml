@@ -6,10 +6,10 @@ services:
       - data:/data/db
     env_file: 
       - ./env/mongo.env
+    networks:
+      - backend-tier
   backendcube:
     build: ./backendcube
-    ports:
-      - '8082:8082'
     volumes: 
       - logs:/app/logs
       - ./backendcube:/app
@@ -18,10 +18,10 @@ services:
       - ./env/backend.env
     depends_on:
       - mongodb
+    networks:
+      - backend-tier
   backendsquare:
     build: ./backendsquare
-    ports:
-      - '8083:8083'
     volumes: 
       - logs:/app/logs
       - ./backendsquare:/app
@@ -30,10 +30,10 @@ services:
       - ./env/backend.env
     depends_on:
       - mongodb
+    networks:
+      - backend-tier
   backendmetric:
     build: ./backendmetric
-    ports:
-      - '8084:8084'
     volumes: 
       - logs:/app/logs
       - ./backendmetric:/app
@@ -42,10 +42,10 @@ services:
       - ./env/backend.env
     depends_on:
       - mongodb
+    networks:
+      - backend-tier
   backendfibonacci:
     build: ./backendfibonacci
-    ports:
-      - '8085:8085'
     volumes: 
       - logs:/app/logs
       - ./backendfibonacci:/app
@@ -54,6 +54,8 @@ services:
       - ./env/backend.env
     depends_on:
       - mongodb
+    networks:
+      - backend-tier
   frontend:
     build: ./frontend
     ports: 
@@ -67,7 +69,13 @@ services:
       - backendmetric
       - backendfibonacci
       - backendsquare
-
+    networks:
+      - frontend-tier
+      - backend-tier
 volumes: 
   data:
   logs:
+networks:
+  frontend-tier:
+  backend-tier:
+

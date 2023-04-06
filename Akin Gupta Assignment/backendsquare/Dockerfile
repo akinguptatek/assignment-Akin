@@ -1,4 +1,4 @@
-FROM node
+FROM node:19-alpine
 
 WORKDIR /app
 
@@ -7,8 +7,6 @@ COPY package.json .
 RUN npm install
 
 COPY . .
-
-EXPOSE 8083
 
 ENV MONGODB_USERNAME=akingupta
 ENV MONGODB_PASSWORD=Nyru1rbXaBVaxjH6
