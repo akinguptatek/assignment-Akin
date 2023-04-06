@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family:  sans-serif;
+}
+
+header {
+	background-color: #00008B;
+	padding: 30px;
+	text-align: center;
+	font-size: 35px;
+	color: white;
+}
+
+nav {
+	float: left;
+	width: 30%;
+	height: 500px; /* only for demonstration, should be removed */
+	background: #0096FF;
+	padding: 20px;
+}
+
+nav ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+article {
+	float: left;
+	padding: 20px;
+	width: 70%;
+	background-color: #0096FF;
+	height: 500px;
+}
+
+table {
+	border: 1px solid black;
+	margin-left: 50px;
+}
+h3 {
+	margin-left: 50px;
+}
+/* Style the footer */
+button {
+	width: 60%;
+	margin: 5px;
+	padding: 20px 60px;
+	background-color: Silver;
+	color: Black;
+	font-size: 12px;
+	font-weight: bold;
+	border: 2px;
+	border-radius: 12px;
+}
+button:hover,
+button:active {
+	background-color: #00008B;
+	border-color: #00008B;
+}
+
+</style>
+</head>
+<body>
+
+
+<header>
+  <h2>My Application</h2>
+</header>
+
+<section>
+  <nav>
+  <form action="/store-goal" method="POST">
+  <div class="form-control">
+  	<label>Input Value</label>
+	<br>  </br>
+    <input type="Number" name="inputvalue">
+   </div>
+    <div>
+	  <br><button>Square</button></br>
+      <br><button>Cube</button></br>
+      <br><button>Fibonacci</button></br>
+      <br><button>Metric</button></br>
+    </ul>
+  </nav>
+  
+  <article>
+  <br>  </br>
+   <h3>Result : ${result}</h3>
+   <br>  </br>
+   <br>  </br>
+
+   <table id="FetchDBOutput">
+		<tr>
+			<td>Performance Metrics</td>
+        </tr>
+        <tr>
+			<td>Square Function</td>
+            <td>${Squaretime}</td>
+        </tr>
+        <tr>
+			<td>Cube Function</td>
+            <td>${Cubetime}</td>
+        </tr>
+        <tr>
+			<td>Fibonacci Function</td>
+            <td>${Fibonaccitime}</td>
+        </tr>
+	</table>
+	<br>  </br>
+	<br>  </br>
+	<br>  </br>
+	<br>  </br>
+  </article>
+</section>
+
+
+
+</body>
+</html>
+
